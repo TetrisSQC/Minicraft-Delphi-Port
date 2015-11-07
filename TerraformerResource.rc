@@ -1,0 +1,7 @@
+bossdeath RCDATA "Redist\\bossdeath.mp3"
+craft RCDATA "Redist\\craft.mp3"
+death RCDATA "Redist\\death.mp3"
+monsterhurt RCDATA "Redist\\monsterhurt.mp3"
+pickup RCDATA "Redist\\pickup.mp3"
+playerhurt RCDATA "Redist\\playerhurt.mp3"
+test RCDATA "Redist\\test.mp3"

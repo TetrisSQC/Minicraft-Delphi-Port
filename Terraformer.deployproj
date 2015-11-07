@@ -1,0 +1,1318 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Condition="Exists('$(BDS)\bin\CodeGear.Deployment.targets')" Project="$(BDS)\bin\CodeGear.Deployment.targets"/>
+    <ProjectExtensions>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <ItemGroup Condition="'$(Platform)'=='Win64'"/>
+    <ItemGroup Condition="'$(Platform)'=='iOSDevice64'">
+        <DeployFile Include="Redist\Loader\768x1004.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch768</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="iOSDevice64\Release\Terraformer.entitlements" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\../\</RemoteDir>
+            <RemoteName>Terraformer.entitlements</RemoteName>
+            <DeployClass>ProjectiOSEntitlements</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\2208x1242.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Landscape-736h@3x.png</RemoteName>
+            <DeployClass>iPhone_Launch2208</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-80.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-80.png</RemoteName>
+            <DeployClass>iPad_SpotLight80</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\forest.mod" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>forest.mod</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-29.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-29.png</RemoteName>
+            <DeployClass>iPhone_Spotlight29</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="iOSDevice64\Release\Terraformer.dSYM" Condition="'$(Config)'=='Release'">
+            <RemoteDir>$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF\</RemoteDir>
+            <RemoteName>Terraformer</RemoteName>
+            <DeployClass>ProjectiOSDeviceDebug</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\test.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>test.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\test.mp3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>test.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="iOSDevice64\Debug\Terraformer.entitlements" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\../\</RemoteDir>
+            <RemoteName>Terraformer.entitlements</RemoteName>
+            <DeployClass>ProjectiOSEntitlements</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\640x960.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default@2x.png</RemoteName>
+            <DeployClass>iPhone_Launch640</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-114.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-114.png</RemoteName>
+            <DeployClass>iPhone_AppIcon114</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-120.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-120.png</RemoteName>
+            <DeployClass>iPhone_AppIcon120</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-60.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-60.png</RemoteName>
+            <DeployClass>iPhone_AppIcon60</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\750x1334.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-667h@2x.png</RemoteName>
+            <DeployClass>iPhone_Launch750</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-180.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-180.png</RemoteName>
+            <DeployClass>iPhone_AppIcon180</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-72.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-72.png</RemoteName>
+            <DeployClass>iPad_AppIcon72</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_SettingIcon_29x29.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>FM_SettingIcon_29x29.png</RemoteName>
+            <DeployClass>iPad_Setting29</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-144.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-144.png</RemoteName>
+            <DeployClass>iPad_AppIcon144</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\768x1024.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Portrait~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch768x1024</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\bossdeath.mp3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>bossdeath.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\monsterhurt.mp3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>monsterhurt.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="iOSDevice64\Debug\Terraformer.info.plist" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Info.plist</RemoteName>
+            <DeployClass>ProjectiOSInfoPList</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\2048x1496.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Landscape@2x.png</RemoteName>
+            <DeployClass>iPad_Launch2048</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\320x480.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default.png</RemoteName>
+            <DeployClass>iPhone_Launch320</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\1024x768.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Landscape~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch1024x768</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\1242x2208.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-736h@3x.png</RemoteName>
+            <DeployClass>iPhone_Launch1242</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="iOSDevice32\Debug\Terraformer" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Terraformer.armv7</RemoteName>
+            <DeployClass>ProjectOutput_iOS32</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\2048x1536.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Landscape@2x~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch2048x1536</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="iOSDevice64\Release\ResourceRules.plist" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>ResourceRules.plist</RemoteName>
+            <DeployClass>ProjectiOSDeviceResourceRules</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\768x1024.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Portrait~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch768x1024</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-80.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-80.png</RemoteName>
+            <DeployClass>iPad_SpotLight80</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_SettingIcon_58x58.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>FM_SettingIcon_58x58.png</RemoteName>
+            <DeployClass>iPad_Setting58</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-76.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-76.png</RemoteName>
+            <DeployClass>iPad_AppIcon76</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-152.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-152.png</RemoteName>
+            <DeployClass>iPad_AppIcon152</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-114.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-114.png</RemoteName>
+            <DeployClass>iPhone_AppIcon114</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\1024x748.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Landscape.png</RemoteName>
+            <DeployClass>iPad_Launch1024</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\death.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>death.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\768x1004.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch768</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\forest.mod" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>forest.mod</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\1536x2008.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Portrait@2x.png</RemoteName>
+            <DeployClass>iPad_Launch1536</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\640x960.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default@2x.png</RemoteName>
+            <DeployClass>iPhone_Launch640</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="iOSDevice64\Debug\Terraformer.dSYM" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF\</RemoteDir>
+            <RemoteName>Terraformer</RemoteName>
+            <DeployClass>ProjectiOSDeviceDebug</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\1024x768.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Landscape~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch1024x768</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-144.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-144.png</RemoteName>
+            <DeployClass>iPad_AppIcon144</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\monsterhurt.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>monsterhurt.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\bossdeath.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>bossdeath.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\1536x2008.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Portrait@2x.png</RemoteName>
+            <DeployClass>iPad_Launch1536</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\1536x2048.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Portrait@2x~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch1536x2048</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\pickup.mp3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>pickup.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-57.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-57.png</RemoteName>
+            <DeployClass>iPhone_AppIcon57</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\playerhurt.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>playerhurt.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="iOSDevice64\Debug\Terraformer" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Terraformer</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_SettingIcon_29x29.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>FM_SettingIcon_29x29.png</RemoteName>
+            <DeployClass>iPad_Setting29</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\pickup.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>pickup.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-57.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-57.png</RemoteName>
+            <DeployClass>iPhone_AppIcon57</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-87.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-87.png</RemoteName>
+            <DeployClass>iPhone_AppIcon87</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_SettingIcon_58x58.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>FM_SettingIcon_58x58.png</RemoteName>
+            <DeployClass>iPad_Setting58</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\640x1136.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-568h@2x.png</RemoteName>
+            <DeployClass>iPhone_Launch640x1136</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\1536x2048.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Portrait@2x~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch1536x2048</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="iOSDevice64\Release\Terraformer" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Terraformer</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="iOSDevice32\Release\Terraformer" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Terraformer.armv7</RemoteName>
+            <DeployClass>ProjectOutput_iOS32</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-29.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-29.png</RemoteName>
+            <DeployClass>iPhone_Spotlight29</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-60.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-60.png</RemoteName>
+            <DeployClass>iPhone_AppIcon60</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\craft.mp3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>craft.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-120.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-120.png</RemoteName>
+            <DeployClass>iPhone_AppIcon120</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\750x1334.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-667h@2x.png</RemoteName>
+            <DeployClass>iPhone_Launch750</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-76.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-76.png</RemoteName>
+            <DeployClass>iPad_AppIcon76</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\craft.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>craft.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\2048x1496.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Landscape@2x.png</RemoteName>
+            <DeployClass>iPad_Launch2048</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="iOSDevice64\Release\Terraformer.info.plist" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Info.plist</RemoteName>
+            <DeployClass>ProjectiOSInfoPList</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-152.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-152.png</RemoteName>
+            <DeployClass>iPad_AppIcon152</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\1242x2208.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-736h@3x.png</RemoteName>
+            <DeployClass>iPhone_Launch1242</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\640x1136.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-568h@2x.png</RemoteName>
+            <DeployClass>iPhone_Launch640x1136</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\2208x1242.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Landscape-736h@3x.png</RemoteName>
+            <DeployClass>iPhone_Launch2208</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-50.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-50.png</RemoteName>
+            <DeployClass>iPad_SpotLight50</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-40.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-40.png</RemoteName>
+            <DeployClass>iPad_SpotLight40</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-72.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-72.png</RemoteName>
+            <DeployClass>iPad_AppIcon72</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-40.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-40.png</RemoteName>
+            <DeployClass>iPad_SpotLight40</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-100.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-100.png</RemoteName>
+            <DeployClass>iPad_SpotLight100</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-100.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-100.png</RemoteName>
+            <DeployClass>iPad_SpotLight100</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\death.mp3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>death.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-180.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-180.png</RemoteName>
+            <DeployClass>iPhone_AppIcon180</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-50.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-50.png</RemoteName>
+            <DeployClass>iPad_SpotLight50</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-87.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-87.png</RemoteName>
+            <DeployClass>iPhone_AppIcon87</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\2048x1536.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Landscape@2x~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch2048x1536</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="iOSDevice64\Debug\ResourceRules.plist" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>ResourceRules.plist</RemoteName>
+            <DeployClass>ProjectiOSDeviceResourceRules</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\1024x748.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Landscape.png</RemoteName>
+            <DeployClass>iPad_Launch1024</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\320x480.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default.png</RemoteName>
+            <DeployClass>iPhone_Launch320</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\playerhurt.mp3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>playerhurt.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='iOSDevice32'">
+        <DeployFile Include="Redist\Icons\logo-87.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-87.png</RemoteName>
+            <DeployClass>iPhone_AppIcon87</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-50.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-50.png</RemoteName>
+            <DeployClass>iPad_SpotLight50</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\2048x1496.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Landscape@2x.png</RemoteName>
+            <DeployClass>iPad_Launch2048</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\playerhurt.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>playerhurt.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-144.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-144.png</RemoteName>
+            <DeployClass>iPad_AppIcon144</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\1536x2008.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Portrait@2x.png</RemoteName>
+            <DeployClass>iPad_Launch1536</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\1242x2208.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-736h@3x.png</RemoteName>
+            <DeployClass>iPhone_Launch1242</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\monsterhurt.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>monsterhurt.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\craft.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>craft.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\bossdeath.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>bossdeath.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\640x1136.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-568h@2x.png</RemoteName>
+            <DeployClass>iPhone_Launch640x1136</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-40.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-40.png</RemoteName>
+            <DeployClass>iPad_SpotLight40</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\1536x2048.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Portrait@2x~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch1536x2048</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\768x1004.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch768</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="iOSDevice32\Debug\Terraformer.entitlements" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\../\</RemoteDir>
+            <RemoteName>Terraformer.entitlements</RemoteName>
+            <DeployClass>ProjectiOSEntitlements</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\768x1024.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Portrait~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch768x1024</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\pickup.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>pickup.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-60.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-60.png</RemoteName>
+            <DeployClass>iPhone_AppIcon60</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\2048x1536.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Landscape@2x~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch2048x1536</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-72.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-72.png</RemoteName>
+            <DeployClass>iPad_AppIcon72</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-120.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-120.png</RemoteName>
+            <DeployClass>iPhone_AppIcon120</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\1024x768.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Landscape~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch1024x768</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="iOSDevice32\Debug\Terraformer.info.plist" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Info.plist</RemoteName>
+            <DeployClass>ProjectiOSInfoPList</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-100.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-100.png</RemoteName>
+            <DeployClass>iPad_SpotLight100</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="iOSDevice32\Debug\ResourceRules.plist" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>ResourceRules.plist</RemoteName>
+            <DeployClass>ProjectiOSDeviceResourceRules</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\death.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>death.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\test.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>test.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-29.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-29.png</RemoteName>
+            <DeployClass>iPad_Setting29</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-114.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-114.png</RemoteName>
+            <DeployClass>iPhone_AppIcon114</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-180.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-180.png</RemoteName>
+            <DeployClass>iPhone_AppIcon180</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-58.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-58.png</RemoteName>
+            <DeployClass>iPad_Setting58</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-76.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-76.png</RemoteName>
+            <DeployClass>iPad_AppIcon76</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="iOSDevice32\Debug\Terraformer.dSYM" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF\</RemoteDir>
+            <RemoteName>Terraformer</RemoteName>
+            <DeployClass>ProjectiOSDeviceDebug</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-152.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-152.png</RemoteName>
+            <DeployClass>iPad_AppIcon152</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\1024x748.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Landscape.png</RemoteName>
+            <DeployClass>iPad_Launch1024</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\320x480.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default.png</RemoteName>
+            <DeployClass>iPhone_Launch320</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-80.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-80.png</RemoteName>
+            <DeployClass>iPad_SpotLight80</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\750x1334.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-667h@2x.png</RemoteName>
+            <DeployClass>iPhone_Launch750</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\640x960.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default@2x.png</RemoteName>
+            <DeployClass>iPhone_Launch640</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Loader\2208x1242.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Default-Landscape-736h@3x.png</RemoteName>
+            <DeployClass>iPhone_Launch2208</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\Icons\logo-57.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>logo-57.png</RemoteName>
+            <DeployClass>iPhone_AppIcon57</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="iOSDevice32\Debug\Terraformer" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>Terraformer</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Win32'">
+        <DeployFile Include="Redist\craft.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer\</RemoteDir>
+            <RemoteName>craft.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Win32\Debug\Terraformer.exe" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer\</RemoteDir>
+            <RemoteName>Terraformer.exe</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="Redist\bossdeath.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer\</RemoteDir>
+            <RemoteName>bossdeath.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\pickup.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer\</RemoteDir>
+            <RemoteName>pickup.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\test.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer\</RemoteDir>
+            <RemoteName>test.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\forest.mod" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer\</RemoteDir>
+            <RemoteName>forest.mod</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\playerhurt.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer\</RemoteDir>
+            <RemoteName>playerhurt.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\monsterhurt.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer\</RemoteDir>
+            <RemoteName>monsterhurt.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Redist\death.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Terraformer\</RemoteDir>
+            <RemoteName>death.mp3</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='OSX32'">
+        <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
+            <RemoteDir>Terraformer.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Android'"/>
+    <ItemGroup Condition="'$(Platform)'=='iOSSimulator'">
+        <DeployFile Include="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\iossimulator\libPCRE.dylib">
+            <RemoteDir>Terraformer.app\</RemoteDir>
+            <RemoteName>libPCRE.dylib</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+</Project>
